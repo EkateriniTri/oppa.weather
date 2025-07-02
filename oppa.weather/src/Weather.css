@@ -1,0 +1,55 @@
+.Oppa {
+  font-family: arial, sans-serif;
+  border: 3px solid #d8a7b1;
+  padding: 16px;
+  border-radius: 10px;
+  color: rgb (135, 135, 135);
+}
+
+.Oppa form {
+  margin-bottom: 30px;
+}
+
+.Oppa img {
+  height: 64px;
+  width: 64px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.Oppa .temperature {
+  font-weight: bold;
+  color: #d8a7b1;
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 400;
+}
+.Oppa .unit {
+  color: #d8a7b1;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -34px;
+  margin-left: 0px;
+}
+
+.Oppa h1 {
+  color: #d8a7b1;
+  font-size: 30px;
+  font-weight: 100;
+  margin: 20 0 0;
+  line-height: 29px;
+}
+.Oppa ul {
+  margin: 0;
+  padding: 0;
+  color: #d8a7b1;
+}
+
+.Oppa li {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  list-style: none;
+}
