@@ -19,7 +19,7 @@ function App() {
         {""}
         and {""}
         <a
-          href="https://kat-react-weather-app.netlify.app/"
+          href="https://oppaweather.netlify.app/"
           target="_blank"
           rel="noopener noreferrer">
           hosted on Netlify
