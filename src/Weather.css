@@ -53,3 +53,8 @@
   line-height: 19px;
   list-style: none;
 }
+
+.btn-pink {
+  background-color: #d8a7b1;
+  border: 1px solid lightgrey;
+}

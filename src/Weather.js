@@ -18,8 +18,7 @@ export default function Weather(props) {
       city: response.data.city,
       humidity: response.data.temperature.humidity,
       feels_like: response.data.temperature.feels_like,
-      icon_url:
-        "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png",
+      icon: response.data.condition.icon,
     });
   }
 
@@ -56,7 +55,7 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-primary w-100"
+                className="btn btn-pink w-100"
               />
             </div>
           </div>
