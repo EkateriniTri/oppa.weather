@@ -58,3 +58,9 @@
   background-color: #d8a7b1;
   border: 1px solid lightgrey;
 }
+
+.OppaResponse {
+  border: 3px solid #d8a7b1;
+  padding: 16px;
+  border-radius: 10px;
+}

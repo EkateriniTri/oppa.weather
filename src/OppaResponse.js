@@ -1,22 +1,25 @@
-export default function OppaResponse({ condition }) {
+export default function OppaResponse({ description }) {
   let message = "";
 
-  switch (condition) {
-    case "Clear":
+  switch (description) {
+    case "clear sky":
       message =
         "☀️ It's sunny, Peach! Perfect time to shine like you always do.";
       break;
-    case "Rain":
-      message =
-        "🌧️ It's raining… Oppa says take your umbrella and maybe stay cozy today.";
+    case "moderate rain":
+    case "light rain":
+    case "shower rain":
+      message = "🌧️ Oppa says take your umbrella, Peach-nim!";
       break;
-    case "Snow":
-      message = "❄️ Snow?! Are we in a K-drama?? Time for fluff and cocoa!";
+    case "snow":
+      message = "❄️ K-drama weather: time for fluff and cocoa!";
       break;
-    case "Clouds":
+    case "broken clouds":
+    case "few clouds":
+    case "scattered clouds":
       message = "☁️ Cloudy mood, but your smile clears skies.";
       break;
-    case "Thunderstorm":
+    case "thunderstorm":
       message =
         "⚡ Stay safe, warrior queen. Oppa would fight the storm for you!";
       break;

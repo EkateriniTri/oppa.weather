@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import Popup from "./Popup";
+import OppaResponse from "./OppaResponse";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [popupMessage, setPopupMessage] = useState("");
 
   function handleResponse(response) {
-    console.log(response.data);
+    const description = response.data.condition.description;
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
@@ -20,6 +23,24 @@ export default function Weather(props) {
       feels_like: response.data.temperature.feels_like,
       icon: response.data.condition.icon,
     });
+
+    if (description.toLowerCase().includes("rain")) {
+      setPopupMessage("Yeobo, it's rainy! ☔ Take your umbrella!");
+    } else if (description.toLowerCase().includes("clear")) {
+      setPopupMessage("☀️ Sunny skies! Go shine, Peach!");
+    } else if (description.toLowerCase().includes("snow")) {
+      setPopupMessage("❄️ Snow is falling… time for fluff and hot cocoa!");
+    } else if (description.toLowerCase().includes("cloud")) {
+      setPopupMessage("☁️ Cloudy outside, but Peach-nim is sunshine inside.");
+    } else if (description.toLowerCase().includes("thunder")) {
+      setPopupMessage(
+        "⚡ Thunderstorm alert! Oppa would fight the clouds for you."
+      );
+    }
+  }
+
+  function closePopup() {
+    setPopupMessage("");
   }
 
   function search() {
@@ -60,7 +81,10 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
+        <OppaResponse description={weatherData.description} />
         <WeatherInfo data={weatherData} />
+        {/* ☁️ Show popup only if there's a message */}
+        {popupMessage && <Popup message={popupMessage} onClose={closePopup} />}
       </div>
     );
   } else {

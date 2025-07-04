@@ -1,7 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
-import Popup from "./Popup";
+
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
@@ -24,13 +24,13 @@ export default function WeatherInfo(props) {
             </div>
           </div>
         </div>
+
         <div className="col-6">
           <ul>
             <li>Humidity: {props.data.humidity} %</li>
             <li>Wind: {Math.round(props.data.wind * 3.6)} km/h</li>
             <li>Real Feel: {Math.round(props.data.feels_like)} °C</li>
           </ul>
-          <Popup />
         </div>
       </div>
     </div>
