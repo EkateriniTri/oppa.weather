@@ -5,7 +5,7 @@ export default function Popup({ message, onClose }) {
     <div className="popup">
       <div className="popup-inner">
         <p>{message}</p>
-        <button onClick={onClose}>Okay oppa ☁️ </button>
+        <button onClick={onClose}>I will oppa ❤️ ☁️ </button>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ export default function OppaResponse({ description }) {
     case "moderate rain":
     case "light rain":
     case "shower rain":
-      message = "🌧️ Oppa says take your umbrella, Peach-nim!";
+      message = "Yeobo, it's rainy 🌧️! ☔ Take your umbrella!";
       break;
     case "snow":
       message = "❄️ K-drama weather: time for fluff and cocoa!";
