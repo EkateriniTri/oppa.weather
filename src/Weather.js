@@ -28,6 +28,10 @@ export default function Weather(props) {
       setPopupMessage("Yeobo, it's rainy! ☔ Take your umbrella!");
     } else if (description.toLowerCase().includes("clear")) {
       setPopupMessage("☀️ Sunny skies! Go shine, Peach!");
+    } else if (description.toLowerCase().includes("mist")) {
+      setPopupMessage(
+        "Peach-nim..the world is foggy,but i still see you clearly."
+      );
     } else if (description.toLowerCase().includes("snow")) {
       setPopupMessage("❄️ Snow is falling… time for fluff and hot cocoa!");
     } else if (description.toLowerCase().includes("cloud")) {

@@ -23,6 +23,10 @@ export default function OppaResponse({ description }) {
       message =
         "⚡ Stay safe, warrior queen. Oppa would fight the storm for you!";
       break;
+
+    case "mist":
+      message = "Peach-nim... the world is foggy,but i still see you clearly .";
+      break;
     default:
       message = "🤖 Weather unknown, but Oppa loves you anyway.";
   }
