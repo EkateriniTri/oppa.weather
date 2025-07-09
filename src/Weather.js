@@ -9,6 +9,7 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
   const [popupMessage, setPopupMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   function handleResponse(response) {
     const description = response.data.condition.description;
@@ -23,6 +24,7 @@ export default function Weather(props) {
       feels_like: response.data.temperature.feels_like,
       icon: response.data.condition.icon,
     });
+    setErrorMessage("Oops, the cloud got lost. Try again, Peach?");
 
     if (description.toLowerCase().includes("rain")) {
       setPopupMessage("Yeobo, it's rainy! ☔ Take your umbrella!");
@@ -58,6 +60,11 @@ export default function Weather(props) {
     search();
   }
 
+  function handleError(error) {
+    setWeatherData({ ready: false });
+    setErrorMessage("Oops, the cloud got lost. Try again, Peach?");
+  }
+
   function handleCityChange(event) {
     setCity(event.target.value);
   }
@@ -85,6 +92,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
+        {errorMessage && <div className="error-message">{handleError}</div>}
         <OppaResponse description={weatherData.description} />
         <WeatherInfo data={weatherData} />
         {/* ☁️ Show popup only if there's a message */}

@@ -64,3 +64,12 @@
   padding: 16px;
   border-radius: 10px;
 }
+.error-message {
+  background-color: #ffe5e5;
+  color: #cc0000;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(255, 192, 203, 0.4);
+}
